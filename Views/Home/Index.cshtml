@@ -1,0 +1,76 @@
+﻿@model Amont_APPT.Models.FormModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 50%; /* Adjust the form container width */
+        margin: 0 auto;
+    }
+
+    label {
+        width: 150px; /* Fixed width for label to align inputs */
+        display: inline-block;
+        font-weight: bold;
+    }
+
+    input {
+        width: 250px; /* Width for input fields to match label width */
+        padding: 8px;
+    }
+
+    .input-container {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+
+<div class="text-center">
+    <h1 class="display-4">Page Client</h1><br /><br />
+
+    <form asp-action="Index" asp-controller="Form">
+
+        <label asp-for="OS"></label>
+        <input asp-for="OS" placeholder="OS12345" required /><br /> <br />
+
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" placeholder="Prenom" /><br />
+     
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" placeholder="Nom" /><br /><br />
+
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" placeholder="Numero de telephone" /><br />
+
+        <label asp-for="Email"></label>
+        <input asp-for="Email" placeholder="Addresse e-mail" /><br /> <br />
+
+        <label asp-for="Address"></label>
+        <input asp-for="Address" placeholder="Address d'intervention" /><br />
+
+        <label asp-for="City"></label>
+        <input asp-for="City" placeholder="Ville d'intervention'" /><br />
+
+        <label asp-for="ZipCode"></label>
+        <input asp-for="ZipCode" placeholder="Code postal" /><br /> <br />
+
+        <label asp-for="Description"></label>
+        <input asp-for="Description" placeholder="Description du sinistre" /><br /><br />
+
+
+        <br />
+
+
+        <input type="submit" />
+    </form>
+
+
+ </div>
